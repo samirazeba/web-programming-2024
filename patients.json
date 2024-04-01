@@ -1,5 +1,6 @@
-{
-    "p1": {
+[
+    {
+        "img": "assets/img/patients/patient.jpg",
         "name": "Richard Wilson",
         "patientId": "P0016",
         "location": "Alabama, USA",
@@ -7,7 +8,8 @@
         "age": "38",
         "bloodGroup": "AB+"
     },
-    "p2": {
+    {
+        "img": "assets/img/patients/patient1.jpg",
         "name": "Charlene Reed",
         "patientId": "P0001",
         "location":"North Carolina, USA",
@@ -15,7 +17,8 @@
         "age": "29",
         "bloodGroup": "0+"
     },
-    "p3": {
+    {
+        "img": "assets/img/patients/patient2.jpg",
         "name": "Travis Trimble",
         "patientId": "PT0002",
         "location":"Maine, USA",
@@ -23,7 +26,8 @@
         "age": "23",
         "bloodGroup": "B+"
     },
-    "p4": {
+    {
+        "img": "assets/img/patients/patient3.jpg",
         "name": "Carl Kelly",
         "patientId": "PT0003",
         "location":"Indiana, USA",
@@ -31,7 +35,8 @@
         "age": "25",
         "bloodGroup": "A+"
     },
-    "p5": {
+    {
+        "img": "assets/img/patients/patient4.jpg",
         "name": "Michelle Fairfax",
         "patientId": "PT0004",
         "location":"Indiana, USA",
@@ -39,7 +44,8 @@
         "age": "25",
         "bloodGroup": "B+"
     },
-    "p6": {
+    {
+        "img": "assets/img/patients/patient5.jpg",
         "name": "Gina Moore",
         "patientId": "PT0005",
         "location":"Florida, USA",
@@ -47,7 +53,8 @@
         "age": "25",
         "bloodGroup": "AB-"
     },
-    "p7": {
+    {
+        "img": "assets/img/patients/patient6.jpg",
         "name": "Elsie Gilley",
         "patientId": "PT0006",
         "location":"Kentucky, USA",
@@ -55,7 +62,8 @@
         "age": "14",
         "bloodGroup": "0-"
     },
-    "p8": {
+    {
+        "img": "assets/img/patients/patient7.jpg",
         "name": "Joan Gardner",
         "patientId": "PT0007",
         "location":"California, USA",
@@ -63,7 +71,8 @@
         "age": "25",
         "bloodGroup": "A-"
     },
-    "p9": {
+    {
+        "img": "assets/img/patients/patient8.jpg",
         "name": "Daniel Griffing",
         "patientId": "PT0007",
         "location":"New Jersey, USA",
@@ -71,7 +80,8 @@
         "age": "28",
         "bloodGroup": "0+"
     },
-    "p10": {
+    {
+        "img": "assets/img/patients/patient9.jpg",
         "name": "Walter Roberson",
         "patientId": "PT0009",
         "location":"Florida, USA",
@@ -79,7 +89,8 @@
         "age": "28",
         "bloodGroup": "A+"
     },
-    "p11": {
+    {
+        "img": "assets/img/patients/patient10.jpg",
         "name": "Robert Rhodes",
         "patientId": "PT0010",
         "location":"California, USA",
@@ -87,7 +98,8 @@
         "age": "19",
         "bloodGroup": "B+"
     },
-    "p12": {
+    {
+        "img": "assets/img/patients/patient11.jpg",
         "name": "Harry Williams",
         "patientId": "PT0011",
         "location":"California, USA",
@@ -95,5 +107,4 @@
         "age": "9",
         "bloodGroup": "A-"
     }
-
-}
+]
