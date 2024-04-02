@@ -29,10 +29,27 @@
 
         <link rel="stylesheet" href="assets/css/spapp.css">
 		<link rel="stylesheet" href="assets/css/dataTables.bootstrap5.css">
+
+		<style>
+			.patient-row-grid {
+			margin-left: -8px;
+			margin-right: -8px;
+			}
+			.patient-row-grid > div {
+			padding-right: 8px;
+			padding-left: 8px;
+			-ms-flex: 0 0 33.333333%;
+			flex: 0 0 33.333333%;
+			max-width: 33.333333%;
+			}
+		</style>
+			
         
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/jquery.spapp.min.js"></script>
         <script src="assets/js/script.js"></script>
+
+		
 	
 	</head>
 	<body>
@@ -379,7 +396,9 @@
 				<script src="assets/js/dataTables.bootstrap5.js"></script>
 				<script src="assets/js/script.js"></script>
 
-				
+		
+		
+
 		<script>
 			$(document).ready(function() {
 				// Fetch the JSON data
@@ -405,7 +424,7 @@
 		<script>
 			$(document).ready(function() {
 				// Fetch the JSON data
-				fetch('doctors.json')
+				fetch('doctor.json')
 					.then(response => response.json())
 					.then(data => {
 						// Populate the DataTable with the JSON data
@@ -423,6 +442,274 @@
 					.catch(error => console.error('Error fetching data:', error));
 			});
 		</script>
+		<!-- Fetch patients.json -->
+		<script>
+			fetch('patients.json')
+			.then(response => {
+			if (!response.ok) {
+				throw new Error('Network response was not ok');
+			}
+			return response.json();
+			})
+			.then(patients => {
+			const patientsContainer = document.getElementById('patients');
+			patientsContainer.className = 'row row-grid';
+			patients.forEach(patient => {
+				// Create HTML elements for patient data
+				const patientElement = document.createElement('div');
+				patientElement.className = 'col-md-6 col-lg-4 col-xl-3';
+				patientElement.innerHTML = `
+					<div class="card widget-profile pat-widget-profile">
+						<div class="card-body">
+							<div class="pro-widget-content">
+								<div class="profile-info-widget">
+									<a href="#" class="booking-doc-img">
+										<img src="${patient.img}" alt="${patient.name}">
+									</a>
+									<div class="profile-det-info">
+										<h3 class="patient-name mb-0">${patient.name}</h3>
+										<p class="patient-id"><i class="fas fa-map-marker-alt"></i> Patient ID: ${patient.patientId}</p>
+										<p class="patient-info">Location: ${patient.location}</p>
+										<p class="patient-info">Phone: ${patient.phone}</p>
+										<p class="patient-info">Age: ${patient.age}</p>
+										<p class="patient-info">Blood Group: ${patient.bloodGroup}</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				`;
+				// Append the patient element to the patients container
+				patientsContainer.appendChild(patientElement);
+			});
+			})
+			.catch(error => {
+			console.error('Error fetching or parsing JSON:', error);
+			});
+	
+		</script>
+
+		<!-- Fetch doctors.json -->
+		<script>
+			// Function to fetch data from doctors.json and create doctor cards
+			function fetchAndDisplayDoctors() {
+			  // Fetch data from doctors.json
+			  fetch('doctors.json')
+				.then(response => response.json()) // Parse JSON response
+				.then(doctors => {
+				  // Get the container where doctor cards will be appended
+				  const container = document.querySelector('.row.row-grid');
+		  
+				  // Iterate through each doctor data
+				  doctors.forEach(doctor => {
+					// Create HTML elements for doctor card
+					const doctorCard = document.createElement('div');
+					doctorCard.className = 'col-md-6 col-lg-4 col-xl-3';
+					doctorCard.innerHTML = `
+					  <div class="profile-widget">
+						<div class="doc-img">
+						  <a href="#doctor-profile">
+							<img class="img-fluid" alt="User Image" src="${doctor.image}">
+						  </a>
+						  <a href="javascript:void(0)" class="fav-btn">
+							<i class="far fa-bookmark"></i>
+						  </a>
+						</div>
+						<div class="pro-content">
+						  <h3 class="title">
+							<a href="#doctor-profile">${doctor.name}</a>
+							<i class="fas fa-check-circle verified"></i>
+						  </h3>
+						  <p class="speciality">${doctor.speciality}</p>
+						  <div class="rating">
+							${'★'.repeat(Math.floor(doctor.rating))}${'☆'.repeat(5 - Math.floor(doctor.rating))}
+							<span class="d-inline-block average-rating">(${doctor.rating})</span>
+						  </div>
+						  <ul class="available-info">
+							<li>
+							  <i class="fas fa-map-marker-alt"></i> ${doctor.location}
+							</li>
+							<li>
+							  <i class="far fa-clock"></i> ${doctor.availability}
+							</li>
+						  </ul>
+						  <div class="row row-sm">
+							<div class="col-6">
+							  <a href="#doctor-profile" class="btn view-btn">View Profile</a>
+							</div>
+							<div class="col-6">
+							  <a href="#booking" class="btn book-btn">Book Now</a>
+							</div>
+						  </div>
+						</div>
+					  </div>
+					`;
+					// Append doctor card to the container
+					container.appendChild(doctorCard);
+				  });
+				})
+				.catch(error => console.error('Error fetching data:', error));
+			}
+		  
+			// Call the fetchAndDisplayDoctors function when the page loads
+			window.onload = fetchAndDisplayDoctors;
+		</script>
+
+		<!-- Fetch appointments.json -->
+		<script>
+			// Fetch data from JSON
+			fetch('appointments.json')
+			  .then(response => response.json())
+			  .then(data => {
+				const appointmentsContainer = document.getElementById('appointments-container');
+			
+				// Loop through the data and create appointment list
+				data.forEach(appointment => {
+				  const appointmentDiv = document.createElement('div');
+				  appointmentDiv.classList.add('appointment-list');
+			
+				  appointmentDiv.innerHTML = `
+					<div class="profile-info-widget">
+					  <a href="#patient-profile" class="booking-doc-img">
+						<img src="${appointment.image}" alt="User Image">
+					  </a>
+					  <div class="profile-det-info">
+						<h3><a href="#patient-profile">${appointment.name}</a></h3>
+						<div class="patient-details">
+						  <h5><i class="far fa-clock"></i> ${appointment.date}</h5>
+						  <h5><i class="fas fa-map-marker-alt"></i> ${appointment.location}</h5>
+						  <h5><i class="fas fa-envelope"></i> ${appointment.email}</h5>
+						  <h5 class="mb-0"><i class="fas fa-phone"></i> ${appointment.phone}</h5>
+						</div>
+					  </div>
+					</div>
+					<div class="appointment-action">
+					  <a href="#" class="btn btn-sm bg-info-light" data-toggle="modal" data-target="#appt_details">
+						<i class="far fa-eye"></i> View
+					  </a>
+					  <a href="javascript:void(0);" class="btn btn-sm bg-success-light">
+						<i class="fas fa-check"></i> Accept
+					  </a>
+					  <a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
+						<i class="fas fa-times"></i> Cancel
+					  </a>
+					</div>
+				  `;
+			
+				  appointmentsContainer.appendChild(appointmentDiv);
+				});
+			  })
+			  .catch(error => console.error('Error fetching data:', error));
+		</script>
+
+		<!-- Fetch bookign.json -->
+		<script>
+			// Fetch data from booking.json
+			fetch('booking.json')
+				.then(response => response.json())
+				.then(data => {
+					// Generate scheduler widget HTML
+					let scheduleWidgetHTML = `
+					<!-- Schedule Widget -->
+					<div class="card booking-schedule schedule-widget">
+						<!-- Schedule Header -->
+						<div class="schedule-header">
+							<div class="row">
+								<div class="col-md-12">
+									<!-- Day Slot -->
+									<div class="day-slot">
+										<ul>`;
+					
+					// Loop through the data to generate day slots
+					data.forEach((item, index) => {
+						scheduleWidgetHTML += `
+							<li>
+								<span>${item.day}</span>
+								<span class="slot-date">${item.date}</span>
+							</li>`;
+					});
+	
+					// Add navigation arrows
+					scheduleWidgetHTML += `
+										</ul>
+									</div>
+									<!-- /Day Slot -->
+								</div>
+							</div>
+						</div>
+						<!-- /Schedule Header -->
+						
+						<!-- Schedule Content -->
+						<div class="schedule-cont">
+							<div class="row">
+								<div class="col-md-12">
+									<!-- Time Slot -->
+									<div class="time-slot">
+										<ul class="clearfix">`;
+					
+					// Add time slots for each day
+					data.forEach((item, index) => {
+						scheduleWidgetHTML += '<li>';
+						item.appointments.forEach(appointment => {
+							scheduleWidgetHTML += `
+								<a class="timing" href="#">
+									<span>${appointment.time}</span>
+								</a>`;
+						});
+						scheduleWidgetHTML += '</li>';
+					});
+	
+					// Close HTML tags
+					scheduleWidgetHTML += `
+										</ul>
+									</div>
+									<!-- /Time Slot -->
+								</div>
+							</div>
+						</div>
+						<!-- /Schedule Content -->
+					</div>
+					<!-- /Schedule Widget -->`;
+	
+					// Append the scheduler widget HTML to the container
+					document.getElementById('scheduler-container').innerHTML = scheduleWidgetHTML;
+				})
+				.catch(error => console.error('Error fetching data:', error));
+		</script>
+
+		<!-- Patient login validation -->
+		<script>
+			const loginForm = document.getElementById('loginForm');
+			const emailInput = document.getElementById('email');
+			const passwordInput = document.getElementById('password');
+			const loginBtn = document.getElementById('loginBtn');
+		
+			loginForm.addEventListener('submit', function(event) {
+				event.preventDefault();
+				
+				if (validateEmail(emailInput.value) && validatePassword(passwordInput.value)) {
+					console.log('Email:', emailInput.value);
+					console.log('Password:', passwordInput.value);
+					// You can submit the form here if validation passes
+				} else {
+					console.log('Form validation failed');
+				}
+			});
+		
+			function validateEmail(email) {
+				// Regular expression for basic email validation
+				const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+				return emailRegex.test(email);
+			}
+		
+			function validatePassword(password) {
+				// Password must be at least 6 characters long
+				return password.length >= 6;
+			}
+		</script>
+		
+		
+		
 		
 	</body>
 

@@ -1,86 +1,98 @@
-{
-    "d1": {
-        "name":"Ruby Perrin",
-        "specialty":"MDS - Periodontology and Oral Implantology, BDS",
-        "stars":"5",
-        "location":"Florida, USA",
-        "availability":"Available on Friday"
+[
+    {
+        "name":"Ruby Perin",
+        "image": "assets/img/doctors/doctor-01.jpg",
+        "speciality": "MDS - Periodontology and Oral Implantology, BDS",
+        "rating": 5,
+        "location": "Florida, USA",
+        "availability": "Available on Fri, 22 Mar"
     },
-    "d2": {
+    {
         "name":"Darren Elder",
-        "specialty":"BDS, MDS - Oral & Maxillofacial Surgery",
-        "stars":"4",
-        "location":"Newyork, USA",
-        "availability":"Available on Friday"
+        "image": "assets/img/doctors/doctor-02.jpg",
+        "speciality": "BDS, MDS - Oral & Maxillofacial Surgery",
+        "rating": 4.6,
+        "location": "Newyork, USA",
+        "availability": "Available on Fri, 22 Mar"
     },
-    "d3": {
+    {
         "name":"Deborah Angel",
-        "specialty":"MBBS, MD - General Medicine, DNB - Cardiology",
-        "stars":"4",
-        "location":"Gorgia, USA",
-        "availability":"Available on Friday"
+        "image": "assets/img/doctors/doctor-03.jpg",
+        "speciality": "MBBS, MD - General Medicine, DNB - Cardiology",
+        "rating": 4.2,
+        "location": "Georgia, USA",
+        "availability": "Available on Fri, 22 Mar"
     },
-    "d4": {
+    {
         "name":"Sofia Brient",
-        "specialty":"MBBS, MS - General Surgery, MCh - Urology",
-        "stars":"4",
-        "location":"Louisiana, USA",
-        "availability":"Available on Friday"
+        "image": "assets/img/doctors/doctor-04.jpg",
+        "speciality": "MBBS, MS - General Surgery, MCh - Urology",
+        "rating": 4,
+        "location": "Louisiana, USA",
+        "availability": "Available on Fri, 22 Mar"
     },
-    "d5": {
+    {
         "name":"Marvin Campbell",
-        "specialty":"MBBS, MD - Ophthalmology",
-        "stars":"4",
-        "location":"California, USA",
-        "availability":"Available on Friday"
+        "image": "assets/img/doctors/doctor-05.jpg",
+        "speciality": "MBBS, MD - Ophthalmology, DNB - Ophthalmology",
+        "rating": 4.2,
+        "location": "Michigan, USA",
+        "availability": "Available on Fri, 22 Mar"
     },
-    "d6": {
+    {
         "name":"Katharine Berthold",
-        "specialty":"MS - Orthopaedics, MBBS",
-        "stars":"4",
-        "location":"Texas, USA",
-        "availability":"Available on Friday"
+        "image": "assets/img/doctors/doctor-06.jpg",
+        "speciality": "MS - Orthopaedics, MBBS, M.Ch - Orthopaedics",
+        "rating": 4.4,
+        "location": "Texas, USA",
+        "availability": "Available on Fri, 22 Mar"
     },
-    "d7": {
+    {
         "name":"Linda Tobin",
-        "specialty":"MBBS, MD - General Medicine",
-        "stars":"4",
-        "location":"Kansas, USA",
-        "availability":"Available on Friday"
+        "image": "assets/img/doctors/doctor-07.jpg",
+        "speciality": "MBBS, MD - General Medicine, DM - Neurology",
+        "rating": 4.3,
+        "location": "Kansas, USA",
+        "availability": "Available on Fri, 22 Mar"
     },
-    "d8": {
+    {
         "name":"Paul Richard",
-        "specialty":"MBBS, MD - Dermatology , Venereology & Leprosy",
-        "stars":"4",
-        "location":"Florida, USA",
-        "availability":"Available on Friday"
+        "image": "assets/img/doctors/doctor-08.jpg",
+        "speciality": "MBBS, MD - Dermatology , Venereology & Lepros",
+        "rating": 4.2,
+        "location": "California, USA",
+        "availability": "Available on Fri, 22 Mar"
     },
-    "d9": {
+    {
         "name":"John Gibbs",
-        "specialty":"MBBS, MD - Dermatology",
-        "stars":"4",
-        "location":"Florida, USA",
-        "availability":"Available on Friday"
+        "image": "assets/img/doctors/doctor-09.jpg",
+        "speciality": "MDS - Periodontology and Oral Implantology, BDS",
+        "rating": 4.8,
+        "location": "Oklahoma, USA",
+        "availability": "Available on Fri, 22 Mar"
     },
-    "d10": {
-        "name":"Olga",
-        "specialty":"MDS - Periodontology and Oral Implantology, BDS",
-        "stars":"4",
-        "location":"Montana, USA",
-        "availability":"Available on Friday, 22Mar"
+    {
+        "name":"Olga Barlow",
+        "image": "assets/img/doctors/doctor-10.jpg",
+        "speciality": "MDS - Periodontology and Oral Implantology, BDS",
+        "rating": 4.2,
+        "location": "Montana, USA",
+        "availability": "Available on Fri, 22 Mar"
     },
-    "d11": {
+    {
         "name":"Julia Washington",
-        "specialty":"MBBS, MS - General Medicine, DM - Endocrinology",
-        "stars":"4",
-        "location":"Oklahoma, USA",
-        "availability":"Available on Friday, 22Mar"
+        "image": "assets/img/doctors/doctor-11.jpg",
+        "speciality": "MBBS, MD - General Medicine, DM - Endocrinology",
+        "rating": 4.6,
+        "location": "Oklahoma, USA",
+        "availability": "Available on Fri, 22 Mar"
     },
-    "d12": {
+    {
         "name":"Shaun Aponte",
-        "specialty":"MBBS, MD - General Medicine",
-        "stars":"4",
-        "location":"Florida, USA",
-        "availability":"Available on Friday, 22Mar"
+        "image": "assets/img/doctors/doctor-12.jpg",
+        "speciality": "MBBS, MS - ENT, Diploma in Otorhinolaryngology (DLO)",
+        "rating": 4,
+        "location": "Indiana, USA",
+        "availability": "Available on Fri, 22 Mar"
     }
-}
+]

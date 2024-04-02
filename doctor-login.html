@@ -320,6 +320,38 @@
 		
 		<!-- Custom JS -->
 		<script src="assets/js/script.js"></script>
+
+		<script>
+			const loginForm = document.getElementById('loginForm');
+			const emailInput = document.getElementById('email');
+			const passwordInput = document.getElementById('password');
+			const loginBtn = document.getElementById('loginBtn');
+		
+			loginForm.addEventListener('submit', function(event) {
+				event.preventDefault();
+				
+				if (validateEmail(emailInput.value) && validatePassword(passwordInput.value)) {
+					console.log('Email:', emailInput.value);
+					console.log('Password:', passwordInput.value);
+					// You can submit the form here if validation passes
+				} else {
+					console.log('Form validation failed');
+				}
+			});
+		
+			function validateEmail(email) {
+				// Regular expression for basic email validation
+				const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+				return emailRegex.test(email);
+			}
+		
+			function validatePassword(password) {
+				// Password must be at least 6 characters long
+				return password.length >= 6;
+			}
+		</script>
+		
+		
 		
 	</body>
 

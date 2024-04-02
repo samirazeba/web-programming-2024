@@ -3,28 +3,42 @@
 	
 <!-- doccure/login.html  30 Nov 2019 04:12:20 GMT -->
 <head>
-		<meta charset="utf-8">
-		<title>CareAlign</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-		
-		<!-- Favicons -->
-		<link href="assets/img/favicon.png" rel="icon">
-		
-		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-		
-		<!-- Fontawesome CSS -->
-		<link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
-		<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
-		
-		<!-- Main CSS -->
-		<link rel="stylesheet" href="assets/css/style.css">
+	<meta charset="utf-8">
+    <title>CareAlign</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
 		
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
 			<script src="assets/js/html5shiv.min.js"></script>
 			<script src="assets/js/respond.min.js"></script>
 		<![endif]-->
+
+	<style>
+		body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto; /* center the container */
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+}
+	</style>
 	
 	</head>
 	<body class="account-page">
@@ -115,45 +129,39 @@
 			
 			<!-- Page Content -->
 			<div class="content">
-				<div class="container-fluid">
-					
-					<div class="row">
-						<div class="col-md-8 offset-md-2">
-							
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-md-8">
 							<!-- Login Tab Content -->
 							<div class="account-content">
-                               
-								<div class="row align-items-center justify-content-center">
-									<div class="col-md-7 col-lg-6 login-left">
-                                        <div class="row align-items-center justify-content-center">
-										    <div class="avatar avatar-xxl">
-                                                <img class="avatar-img rounded-circle" src="assets/img/patient-login.jpg" alt="Patient Image">
-                                            </div>   
-                                            <div>
-                                                <a href="patient-login.html"><h4>Patient</h4></a>
-                                            </div> 
-                                        </div>                                    
+								<div class="row">
+									<div class="col-md-6">
+										<div class="text-center">
+											<div class="avatar avatar-xxl">
+												<img class="avatar-img rounded-circle" src="assets/img/patient-login.jpg" alt="Patient Image">
+											</div>   
+											<div>
+												<a href="patient-login.html"><h4>Patient</h4></a>
+											</div> 
+										</div>
 									</div>
-                                    <div class="col-md-7 col-lg-6 login-left">
-                                        <div class="row align-items-center justify-content-center">
-                                            <div class="avatar avatar-xxl">
-                                                <img class="avatar-img rounded-circle" src="assets/img/doctor-login.jpg" alt="Doctor Image">
-                                            </div>
-                                            <div>
-                                                <a href="doctor-login.html"><h4>Doctor</h4></a>
-                                            </div>
-                                        </div>
-                                    </div>
-							    </div>
+									<div class="col-md-6">
+										<div class="text-center">
+											<div class="avatar avatar-xxl">
+												<img class="avatar-img rounded-circle" src="assets/img/doctor-login.jpg" alt="Doctor Image">
+											</div>
+											<div>
+												<a href="doctor-login.html"><h4>Doctor</h4></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 							<!-- /Login Tab Content -->
-								
-						    </div>
-					    </div>
-
-				    </div>
-
-			    </div>	
-            </div>	
+						</div>
+					</div>
+				</div>
+			</div>
 			<!-- /Page Content -->
    
 			<!-- Footer -->
