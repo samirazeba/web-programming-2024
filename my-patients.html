@@ -25,6 +25,19 @@
 			<script src="assets/js/html5shiv.min.js"></script>
 			<script src="assets/js/respond.min.js"></script>
 		<![endif]-->
+		<style>
+			.patient-row-grid {
+			margin-left: -8px;
+			margin-right: -8px;
+			}
+			.patient-row-grid > div {
+			padding-right: 8px;
+			padding-left: 8px;
+			-ms-flex: 0 0 33.333333%;
+			flex: 0 0 33.333333%;
+			max-width: 33.333333%;
+			}
+		</style>
 	
 	</head>
 	<body>
@@ -180,57 +193,62 @@
 									<nav class="dashboard-menu">
 										<ul>
 											<li>
-												<a href="doctor-dashboard.html">
+												<a href="#doctor-dashboard">
 													<i class="fas fa-columns"></i>
 													<span>Dashboard</span>
 												</a>
 											</li>
 											<li>
-												<a href="appointments.html">
+												<a href="#appointments">
 													<i class="fas fa-calendar-check"></i>
 													<span>Appointments</span>
 												</a>
 											</li>
 											<li class="active">
-												<a href="my-patients.html">
+												<a href="#my-patients">
 													<i class="fas fa-user-injured"></i>
 													<span>My Patients</span>
 												</a>
 											</li>
 											<li>
-												<a href="schedule-timings.html">
+												<a href="#schedule-timings">
 													<i class="fas fa-hourglass-start"></i>
 													<span>Schedule Timings</span>
 												</a>
 											</li>
 											<li>
-												<a href="reviews.html">
+												<a href="#reviews">
 													<i class="fas fa-star"></i>
 													<span>Reviews</span>
 												</a>
 											</li>
 											<li>
-												<a href="doctor-profile-settings.html">
+												<a href="#doctor-profile-settings">
 													<i class="fas fa-user-cog"></i>
 													<span>Profile Settings</span>
 												</a>
 											</li>
 											<li>
-												<a href="social-media.html">
+												<a href="#social-media">
 													<i class="fas fa-share-alt"></i>
 													<span>Social Media</span>
 												</a>
 											</li>
 											<li>
-												<a href="doctor-change-password.html">
+												<a href="#doctor-change-password">
 													<i class="fas fa-lock"></i>
 													<span>Change Password</span>
 												</a>
 											</li>
 											<li>
-												<a href="index-2.html">
+												<a href="#home">
 													<i class="fas fa-sign-out-alt"></i>
 													<span>Logout</span>
+												</a>
+											</li>
+											<li>
+												<a href="#patients-table">
+													<span>Patients Table</span>
 												</a>
 											</li>
 										</ul>
@@ -240,7 +258,13 @@
 							<!-- /Profile Sidebar -->
 							
 						</div>
-						<div id="patients"></div>
+						<div class="col-md-7 col-lg-8 col-xl-9">
+							<div id="patients"></div>
+							<div class="row patient-row-grid">
+										
+							</div>
+
+						</div>
 					</div>
 
 				</div>
@@ -403,30 +427,52 @@
 		<!-- Custom JS -->
 		<script src="assets/js/script.js"></script>
 
-		<script>
-			fetch('../patients.json')
-				.then(response => response.json())
-				.then(patients => {
-					const patientsContainer = document.getElementById('patients');
-					patients.forEach(patient => {
-						// Create HTML elements for patient data
-						const patientElement = document.createElement('div');
-						patientElement.className = 'patient-card'; // Add the class to the patient element
-						patientElement.innerHTML = `
-							<img src="${patient.img}" alt="${patient.name}">
-							<h3>Name: ${patient.name}</h3>
-							<p>Patient ID: ${patient.patientId}</p>
-							<p>Location: ${patient.location}</p>
-							<p>Phone: ${patient.phone}</p>
-							<p>Age: ${patient.age}</p>
-							<p>Blood Group: ${patient.bloodGroup}</p>
-						`;
-						// Append the patient element to the patients container
-						patientsContainer.appendChild(patientElement);
-					});
-				})
-				.catch(error => console.error('Error:', error));
-		</script>
+	<script>
+		fetch('patients.json')
+    	.then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    	})
+    	.then(patients => {
+        const patientsContainer = document.getElementById('patients');
+        patientsContainer.className = 'row row-grid';
+        patients.forEach(patient => {
+            // Create HTML elements for patient data
+            const patientElement = document.createElement('div');
+            patientElement.className = 'col-md-6 col-lg-4 col-xl-3';
+            patientElement.innerHTML = `
+                <div class="card widget-profile pat-widget-profile">
+                    <div class="card-body">
+                        <div class="pro-widget-content">
+                            <div class="profile-info-widget">
+                                <a href="#" class="booking-doc-img">
+                                    <img src="${patient.img}" alt="${patient.name}">
+                                </a>
+                                <div class="profile-det-info">
+                                    <h3 class="patient-name mb-0">${patient.name}</h3>
+                                    <p class="patient-id"><i class="fas fa-map-marker-alt"></i> Patient ID: ${patient.patientId}</p>
+                                    <p class="patient-info">Location: ${patient.location}</p>
+                                    <p class="patient-info">Phone: ${patient.phone}</p>
+                                    <p class="patient-info">Age: ${patient.age}</p>
+                                    <p class="patient-info">Blood Group: ${patient.bloodGroup}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            // Append the patient element to the patients container
+            patientsContainer.appendChild(patientElement);
+        });
+    	})
+    	.catch(error => {
+        console.error('Error fetching or parsing JSON:', error);
+    });
+
+	</script>
+		
 		
 	</body>
 

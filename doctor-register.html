@@ -144,6 +144,10 @@
 												<input type="password" class="form-control floating">
 												<label class="focus-label">Create Password</label>
 											</div>
+											<div class="form-group form-focus">
+												<input type="password" class="form-control floating">
+												<label class="focus-label">Confirm Password</label>
+											</div>
 											<div class="text-right">
 												<a class="forgot-link" href="doctor-login.html">Already have an account?</a>
 											</div>
@@ -326,6 +330,58 @@
 		
 		<!-- Custom JS -->
 		<script src="assets/js/script.js"></script>
+
+		<script>
+			// Function to validate and submit the form
+			function validateAndSubmitForm(event) {
+				event.preventDefault(); // Prevent form submission
+				
+				// Get form inputs
+				const nameInput = document.querySelector('input[name="name"]');
+				const mobileInput = document.querySelector('input[name="mobile"]');
+				const passwordInput = document.querySelector('input[name="password"]');
+				const confirmPasswordInput = document.querySelector('input[name="confirmPassword"]');
+				
+				// Validate inputs
+				if (nameInput.value.trim() === '') {
+					console.error('Name field is required');
+					return;
+				}
+		
+				if (mobileInput.value.trim() === '') {
+					console.error('Mobile Number field is required');
+					return;
+				}
+		
+				if (passwordInput.value.trim() === '') {
+					console.error('Create Password field is required');
+					return;
+				}
+		
+				if (confirmPasswordInput.value.trim() === '') {
+					console.error('Confirm Password field is required');
+					return;
+				}
+		
+				if (passwordInput.value !== confirmPasswordInput.value) {
+					console.error('Password and Confirm Password must match');
+					return;
+				}
+		
+				// If all inputs are valid, print them in the console
+				console.log('Name:', nameInput.value);
+				console.log('Mobile Number:', mobileInput.value);
+				console.log('Create Password:', passwordInput.value);
+				console.log('Confirm Password:', confirmPasswordInput.value);
+		
+				// Optionally, you can submit the form
+				// event.target.submit();
+			}
+		
+			// Add event listener to the form for the 'submit' event
+			document.querySelector('form').addEventListener('submit', validateAndSubmitForm);
+		</script>
+		
 		
 	</body>
 
