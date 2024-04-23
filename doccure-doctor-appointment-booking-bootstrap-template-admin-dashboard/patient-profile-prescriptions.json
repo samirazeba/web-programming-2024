@@ -1,0 +1,108 @@
+{
+    "prescriptions": [
+      {
+        "date": "14 Nov 2019",
+        "name": "Prescription 1",
+        "doctor": {
+          "name": "Dr. Ruby Perrin",
+          "specialty": "Dental",
+          "avatar": "assets/img/doctors/doctor-thumb-01.jpg"
+        },
+        "actions": [
+          {
+            "action": "Print",
+            "icon": "fas fa-print"
+          },
+          {
+            "action": "View",
+            "icon": "far fa-eye"
+          }
+        ]
+      },
+      {
+        "date": "13 Nov 2019",
+        "name": "Prescription 2",
+        "doctor": {
+          "name": "Dr. Darren Elder",
+          "specialty": "Dental",
+          "avatar": "assets/img/doctors/doctor-thumb-02.jpg"
+        },
+        "actions": [
+          {
+            "action": "Print",
+            "icon": "fas fa-print"
+          },
+          {
+            "action": "View",
+            "icon": "far fa-eye"
+          },
+          {
+            "action": "Edit",
+            "icon": "fas fa-edit"
+          },
+          {
+            "action": "Delete",
+            "icon": "far fa-trash-alt"
+          }
+        ]
+      },
+      {
+        "date": "12 Nov 2019",
+        "name": "Prescription 3",
+        "doctor": {
+          "name": "Dr. Deborah Angel",
+          "specialty": "Cardiology",
+          "avatar": "assets/img/doctors/doctor-thumb-03.jpg"
+        },
+        "actions": [
+          {
+            "action": "Print",
+            "icon": "fas fa-print"
+          },
+          {
+            "action": "View",
+            "icon": "far fa-eye"
+          }
+        ]
+      },
+      {
+        "date": "11 Nov 2019",
+        "name": "Prescription 4",
+        "doctor": {
+          "name": "Dr. Sofia Brient",
+          "specialty": "Urology",
+          "avatar": "assets/img/doctors/doctor-thumb-04.jpg"
+        },
+        "actions": [
+          {
+            "action": "Print",
+            "icon": "fas fa-print"
+          },
+          {
+            "action": "View",
+            "icon": "far fa-eye"
+          }
+        ]
+      },
+      {
+        "date": "10 Nov 2019",
+        "name": "Prescription 5",
+        "doctor": {
+          "name": "Dr. Marvin Campbell",
+          "specialty": "Dental",
+          "avatar": "assets/img/doctors/doctor-thumb-05.jpg"
+        },
+        "actions": [
+          {
+            "action": "Print",
+            "icon": "fas fa-print"
+          },
+          {
+            "action": "View",
+            "icon": "far fa-eye"
+          }
+        ]
+      }
+    ]
+  }
+  

@@ -88,48 +88,42 @@
 								<div class="card-body">
 									
 									<!-- Profile Settings Form -->
-									<form>
-										<div class="row form-row">
-											<div class="col-12 col-md-12">
+									<form id="patient_settings_form">
+										<div class="row">
+											<div class="col-12 col-md-6">
 												<div class="form-group">
-													<div class="change-avatar">
-														<div class="profile-img">
-															<img src="assets/img/patients/patient.jpg" alt="User Image">
-														</div>
-														<div class="upload-img">
-															<div class="change-photo-btn">
-																<span><i class="fa fa-upload"></i> Upload Photo</span>
-																<input type="file" class="upload">
-															</div>
-															<small class="form-text text-muted">Allowed JPG, GIF or PNG. Max size of 2MB</small>
-														</div>
-													</div>
+													<label for="first_name">First Name</label>
+													<input type="text" id="first_name" class="form-control" required>
 												</div>
 											</div>
 											<div class="col-12 col-md-6">
 												<div class="form-group">
-													<label>First Name</label>
-													<input type="text" class="form-control" value="Richard">
+													<label for="last_name">Last Name</label>
+													<input type="text" id="last_name" class="form-control" required>
 												</div>
 											</div>
 											<div class="col-12 col-md-6">
 												<div class="form-group">
-													<label>Last Name</label>
-													<input type="text" class="form-control" value="Wilson">
+													<label for="dob">Date of Birth</label>
+													<input type="text" id="dob" class="form-control datetimepicker" required>
 												</div>
 											</div>
 											<div class="col-12 col-md-6">
 												<div class="form-group">
-													<label>Date of Birth</label>
-													<div class="cal-icon">
-														<input type="text" class="form-control datetimepicker" value="24-07-1983">
-													</div>
+													<label for="email">Email</label>
+													<input type="email" id="email" class="form-control" required>
 												</div>
 											</div>
 											<div class="col-12 col-md-6">
 												<div class="form-group">
-													<label>Blood Group</label>
-													<select class="form-control select">
+													<label for="phone">Phone</label>
+													<input type="text" id="phone" class="form-control" required>
+												</div>
+											</div>
+											<div class="col-12 col-md-6">
+												<div class="form-group">
+													<label for="blood_group">Blood Group</label>
+													<select id="blood_group" class="form-control select" required>
 														<option>A-</option>
 														<option>A+</option>
 														<option>B-</option>
@@ -141,46 +135,34 @@
 													</select>
 												</div>
 											</div>
-											<div class="col-12 col-md-6">
+											<div class="col-12">
 												<div class="form-group">
-													<label>Email ID</label>
-													<input type="email" class="form-control" value="richard@example.com">
+													<label for="address">Address</label>
+													<input type="text" id="address" class="form-control" required>
 												</div>
 											</div>
 											<div class="col-12 col-md-6">
 												<div class="form-group">
-													<label>Mobile</label>
-													<input type="text" value="+1 202-555-0125" class="form-control">
+													<label for="city">City</label>
+													<input type="text" id="city" class="form-control" required>
+												</div>
+											</div>
+											<div class="col-12 col-md-6">
+												<div class="form-group">
+													<label for="country">Country</label>
+													<input type="text" id="country" class="form-control" required>
+												</div>
+											</div>
+											<div class="col-12 col-md-6">
+												<div class="form-group">
+													<label for="zip_code">Zip Code</label>
+													<input type="text" id="zip_code" class="form-control" required>
 												</div>
 											</div>
 											<div class="col-12">
 												<div class="form-group">
-												<label>Address</label>
-													<input type="text" class="form-control" value="806 Twin Willow Lane">
-												</div>
-											</div>
-											<div class="col-12 col-md-6">
-												<div class="form-group">
-													<label>City</label>
-													<input type="text" class="form-control" value="Old Forge">
-												</div>
-											</div>
-											<div class="col-12 col-md-6">
-												<div class="form-group">
-													<label>State</label>
-													<input type="text" class="form-control" value="Newyork">
-												</div>
-											</div>
-											<div class="col-12 col-md-6">
-												<div class="form-group">
-													<label>Zip Code</label>
-													<input type="text" class="form-control" value="13420">
-												</div>
-											</div>
-											<div class="col-12 col-md-6">
-												<div class="form-group">
-													<label>Country</label>
-													<input type="text" class="form-control" value="United States">
+													<label for="notes">Medical History</label>
+													<textarea id="notes" class="form-control" required></textarea>
 												</div>
 											</div>
 										</div>

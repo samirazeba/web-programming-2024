@@ -17,27 +17,45 @@
 									</div>
 									<div class="col-md-12 col-lg-6 login-right">
 										<div class="login-header">
-											<h3>Doctor Register <a href="#register">Not a Doctor?</a></h3>
+											<h3>Doctor Register</h3>
 										</div>
 										
 										<!-- Register Form -->
-										<form action="#doctor-dashboard">
+										<form id="registerForm">
 											<div class="form-group form-focus">
 												<input type="text" class="form-control floating">
 												<label class="focus-label">Name</label>
 											</div>
 											<div class="form-group form-focus">
-												<input type="text" class="form-control floating">
-												<label class="focus-label">Mobile Number</label>
+												<input 
+												id="email"
+												type="email" 
+												class="form-control floating"
+												required>
+												<label class="focus-label">Email</label>
 											</div>
 											<div class="form-group form-focus">
-												<input type="password" class="form-control floating">
+												<input 
+												id="password"
+												type="password" 
+												class="form-control floating"
+												required>
 												<label class="focus-label">Create Password</label>
 											</div>
-											<div class="text-right">
-												<a class="forgot-link" href="#login">Already have an account?</a>
+											<div class="form-group form-focus">
+												<input 
+												id="confirmPassword" 
+												type="password" 
+												class="form-control floating"
+												autocomplete="new-password"
+												required
+												>
+												<label class="focus-label">Confirm Password</label>
 											</div>
-											<button class="btn btn-primary btn-block btn-lg login-btn" type="submit">Signup</button>
+											<div class="text-right">
+												<a class="forgot-link" href="#patient-login">Already have an account?</a>
+											</div>
+											<button class="btn btn-primary btn-block btn-lg login-btn" type="submit">Sign up</button>
 											<div class="login-or">
 												<span class="or-line"></span>
 												<span class="span-or">or</span>
