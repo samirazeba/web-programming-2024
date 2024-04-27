@@ -9,11 +9,10 @@ Version      : 1.0
 	
 	// Stick Sidebar
 	
-	if ($(window).width() > 767) {
-		if($('.theiaStickySidebar').length > 0) {
-			$('.theiaStickySidebar').theiaStickySidebar({
-			  // Settings
-			  additionalMarginTop: 30
+	if (jQuery(window).width() > 767) {
+		if(jQuery('.theiaStickySidebar').length > 0) {
+			jQuery('.theiaStickySidebar').theiaStickySidebar({
+				additionalMarginTop: 30
 			});
 		}
 	}
@@ -358,3 +357,5 @@ Version      : 1.0
 	$(window).scroll(animateElements);
 	
 })(jQuery);
+
+
