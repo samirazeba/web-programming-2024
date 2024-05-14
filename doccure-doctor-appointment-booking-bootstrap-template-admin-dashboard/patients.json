@@ -1,98 +1,68 @@
 [
     {
-        "img": "assets/img/patients/patient.jpg",
+        "id": 1,
         "name": "Richard Wilson",
-        "location": "Alabama, USA",
-        "phone": "+1 952 001 8563",
-        "age": "38",
-        "bloodGroup": "AB+"
+        "date_of_birth": "1981-11-23",
+        "gender": "Male",
+        "email": "richard.wilson@gmail.com",
+        "phone_number": "408-123-8954",
+        "city": "San Francisco",
+        "address": "4th Street",
+        "medical_hisotry": "Asthma, High Blood Pressure"
     },
     {
-        "img": "assets/img/patients/patient1.jpg",
+        "id" : 2,
         "name": "Charlene Reed",
-        "location":"North Carolina, USA",
-        "phone": "+1 828 632 9170",
-        "age": "29",
-        "bloodGroup": "0+"
+        "date_of_birth": "1975-08-25",
+        "gender": "Female",
+        "email": "charlene.reed@gmail.com",
+        "phone_number": "408-123-8958",
+        "city": "Chicago",
+        "address": "Dr. Ronny Street",
+        "medical_hisotry": "Hypertension and Type 2 Diabetes Mellitus" 
     },
     {
-        "img": "assets/img/patients/patient2.jpg",
+        "id": 3,
         "name": "Travis Trimble",
-        "location":"Maine, USA",
-        "phone": "+1 207 729 9974",
-        "age": "23",
-        "bloodGroup": "B+"
+        "date_of_birth": "1985-04-02",
+        "gender": "Male",
+        "email": "travis.trimble@gmail.com",
+        "phone_number": "408-123-8959",
+        "city": "New York",
+        "address": "Wall Street",
+        "medical_hisotry": "Coronary Artery Disease with Coronary Artery Bypass Graft (CABG) Surgery" 
     },
     {
-        "img": "assets/img/patients/patient3.jpg",
+        "id": 4,
         "name": "Carl Kelly",
-        "location":"Indiana, USA",
-        "phone": "+1 260 724 7769",
-        "age": "25",
-        "bloodGroup": "A+"
+        "date_of_birth": "1990-12-15",
+        "gender": "Male",
+        "email": "carl.kelly@gmail.com",
+        "phone_number": "408-123-8960",
+        "city": "Los Angeles",
+        "address": "LA Street",
+        "medical_hisotry": "Major Depressive Disorder (MDD)"
     },
     {
-        "img": "assets/img/patients/patient4.jpg",
+        "id": 5,
         "name": "Michelle Fairfax",
-        "location":"Indiana, USA",
-        "phone": "+1 504 368 6874",
-        "age": "25",
-        "bloodGroup": "B+"
+        "date_of_birth": "1987-05-07",
+        "gender": "Female",
+        "email": "michelle.firfax@gmail.com",
+        "phone_number": "408-123-8961",
+        "city": "Indianapolis",
+        "address": "Woodland Street",
+        "medical_hisotry": "Asthma"
     },
     {
-        "img": "assets/img/patients/patient5.jpg",
+        "id": 6,
         "name": "Gina Moore",
-        "location":"Florida, USA",
-        "phone": "+1 954 820 7887",
-        "age": "25",
-        "bloodGroup": "AB-"
-    },
-    {
-        "img": "assets/img/patients/patient6.jpg",
-        "name": "Elsie Gilley",
-        "location":"Kentucky, USA",
-        "phone": "+1 315 384 4562",
-        "age": "14",
-        "bloodGroup": "0-"
-    },
-    {
-        "img": "assets/img/patients/patient7.jpg",
-        "name": "Joan Gardner",
-        "location":"California, USA",
-        "phone": "+1 707 2202 603",
-        "age": "25",
-        "bloodGroup": "A-"
-    },
-    {
-        "img": "assets/img/patients/patient8.jpg",
-        "name": "Daniel Griffing",
-        "location":"New Jersey, USA",
-        "phone": "+1 973 773 9497",
-        "age": "28",
-        "bloodGroup": "0+"
-    },
-    {
-        "img": "assets/img/patients/patient9.jpg",
-        "name": "Walter Roberson",
-        "location":"Florida, USA",
-        "phone": "+1 850 358 4445",
-        "age": "28",
-        "bloodGroup": "A+"
-    },
-    {
-        "img": "assets/img/patients/patient10.jpg",
-        "name": "Robert Rhodes",
-        "location":"California, USA",
-        "phone": "+1 858 259 5285",
-        "age": "19",
-        "bloodGroup": "B+"
-    },
-    {
-        "img": "assets/img/patients/patient11.jpg",
-        "name": "Harry Williams",
-        "location":"California, USA",
-        "phone": "+1 303 607 7075",
-        "age": "9",
-        "bloodGroup": "A-"
+        "date_of_birth": "1984-10-02",
+        "gender": "Female",
+        "email": "gina.moore@gmail.com",
+        "phone_number": "408-123-8962",
+        "city": "San Francisco",
+        "address": "Brodway Street",
+        "medical_hisotry": "Hypertension"
     }
 ]

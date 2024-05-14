@@ -1,0 +1,104 @@
+<div>
+    <div class="main-wrapper">
+        <!-- Breadcrumb -->
+			<div class="breadcrumb-bar">
+				<div class="container-fluid">
+					<div class="row align-items-center">
+						<div class="col-md-12 col-12">
+							<nav aria-label="breadcrumb" class="page-breadcrumb">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="#home">Home</a></li>
+									<li class="breadcrumb-item active" aria-current="page">Departments</li>
+								</ol>
+							</nav>
+							<h2 class="breadcrumb-title">Departments</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- /Breadcrumb -->
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="appointment-tab">
+                    
+                    <div class="tab-content">
+                    
+                        <!-- Departments -->
+                        <div class="tab-pane show active" id="departments">
+                            <div class="card card-table mb-0">
+                                <div class="card-body">
+                                    <h3><br>Departments</h3>
+                                    <div class="text-right">
+                                        <button class="add-new-btn" id="addDepartmentBtn">Add Department</button>
+                                    </div>
+
+                                    <div class="table-responsive">
+                                        <table id="departments" class="table table-striped" style="width:100%">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Department Name</th>
+                                                    <th>Department Head Name</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="departments-table-body"></tbody>
+                                        </table>	
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Departments -->
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="addDepartmentModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Add Department</h2>
+                <!-- Add department form -->
+                <form id="addDepartmentForm">
+                    <div class="form-group">
+                        <label for="departmentName">Department Name:</label>
+                        <input type="text" id="departmentName" name="departmentName">
+                    </div>
+                    <div class="form-group">
+                        <label for="departmentHeadName">Department Head Name:</label>
+                        <input type="text" id="departmentHeadName" name="departmentHeadName">
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<script>
+    
+    // Add Department Modal
+    var add_department_modal = document.getElementById("addDepartmentModal");
+    var add_department_btn = document.getElementById("addDepartmentBtn");
+
+    // Get the <span> element that closes the department modal
+    var department_span = document.querySelector("#addDepartmentModal .close");
+
+    // When the user clicks the button to add department, open the department modal
+    add_department_btn.onclick = function () {
+    add_department_modal.style.display = "block";
+    };
+
+    // When the user clicks on <span> (x) in the department modal, close the department modal
+    department_span.onclick = function () {
+    add_department_modal.style.display = "none";
+    };
+
+    // When the user clicks anywhere outside of the department modal, close it
+    window.onclick = function (event) {
+    if (event.target == add_department_modal) {
+        add_department_modal.style.display = "none";
+    }
+    };
+</script>

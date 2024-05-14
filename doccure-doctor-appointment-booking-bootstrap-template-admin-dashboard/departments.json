@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "department_name": "Urology",
+        "department_head_name": "Dr. Samantha Greene"
+    },
+    {
+        "id": 2,
+        "department_name": "Neurology",
+        "department_head_name": "Dr. Michael Thompson"
+    },
+    {
+        "id": 3,
+        "department_name": "Orthopedics",
+        "department_head_name": "Dr. Emily Rodriguez"
+    },
+    {
+        "id": 4,
+        "department_name": "Cardiologiy",
+        "department_head_name": "Dr. Benjamin Davis"
+    },
+    {
+        "id": 5,
+        "department_name": "Dentistry",
+        "department_head_name": " Dr. Lauren Smith"
+    }
+]

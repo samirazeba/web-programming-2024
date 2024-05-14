@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "patient_id": 2,
+        "patient_name": "Travis Trimble",
+        "rating": 4.9,
+        "comment": "Dr. Smith provided excellent care during my recent visit. Their thoroughness and attention to detail were impressive. I highly recommend them to anyone seeking quality medical treatment."
+    },
+    {
+        "id": 2,
+        "patient_id": 5,
+        "patient_name": "Gine Moore",
+        "rating": 4.5,
+        "comment": "I had a great experience with Dr. Johnson. They were very understanding and took the time to listen to my concerns. Their professionalism and expertise put me at ease, and I left feeling confident in my treatment plan."
+    },
+    {
+        "id": 3,
+        "patient_id": 4,
+        "patient_name": "Michelle Fairfax",
+        "rating": 4.8,
+        "comment": "Dr. Lee is a fantastic doctor! They have a warm and compassionate bedside manner that immediately made me feel comfortable. Their knowledge and expertise were evident throughout my appointment, and I appreciate the level of care they provided."
+    },
+    {
+        "id": 4,
+        "patient_id": 1,
+        "patient_name": "Charlene Reed",
+        "rating": 3.8,
+        "comment": "I couldn't be happier with the care I received from Dr. Rodriguez. They were knowledgeable, patient, and kind throughout the entire process. Their communication skills are excellent, and I felt well-informed every step of the way."
+    },
+    {
+        "id": 5,
+        "patient_id": 6,
+        "patient_name": "Richard Wilson",
+        "rating": 4.7,
+        "comment": "Dr. Hernandez exceeded my expectations in every way. They were attentive, thorough, and genuinely invested in my well-being. I am grateful for their expertise and compassionate care, and I would recommend them without hesitation."
+    },
+    {
+        "id": 6,
+        "patient_id": 3,
+        "patient_name": "Carl Kelly",
+        "rating": 4.6,
+        "comment": "Dr. Wilson is an exceptional physician. Their professionalism and dedication to patient care are commendable. I felt heard and respected during my appointment, and I have full confidence in their abilities as a healthcare provider."
+    }
+]
