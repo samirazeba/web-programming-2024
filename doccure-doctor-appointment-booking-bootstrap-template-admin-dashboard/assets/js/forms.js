@@ -1,4 +1,220 @@
 document.addEventListener("DOMContentLoaded", function () {
+  document
+    .getElementById("addDoctorForm")
+    .addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent the form from submitting
+
+      // Get form values
+      var departmentId = document.getElementById("departmentId").value;
+      var doctorName = document.getElementById("doctorName").value;
+      var specialization = document.getElementById("specialization").value;
+      var dob = document.getElementById("dob").value;
+      var gender = document.getElementById("gender").value;
+      var email = document.getElementById("email").value;
+      var phoneNumber = document.getElementById("phoneNumber").value;
+      var city = document.getElementById("city").value;
+      var address = document.getElementById("address").value;
+
+      // Validate form
+      if (
+        !departmentId ||
+        !doctorName ||
+        !specialization ||
+        !dob ||
+        !gender ||
+        !email
+      ) {
+        alert(
+          "You have to fill everything except phone number, city, and address."
+        );
+        return;
+      }
+
+      // Print form values to the console
+      console.log("Department ID:", departmentId);
+      console.log("Doctor Name:", doctorName);
+      console.log("Specialization:", specialization);
+      console.log("Date of Birth:", dob);
+      console.log("Gender:", gender);
+      console.log("Email:", email);
+      console.log("Phone Number:", phoneNumber);
+      console.log("City:", city);
+      console.log("Address:", address);
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  document
+    .getElementById("addReviewForm")
+    .addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent the form from submitting
+
+      // Get form values
+      var patientId = document.getElementById("patientId").value;
+      var patientName = document.getElementById("patientName").value;
+      var rating = document.getElementById("rating").value;
+      var comment = document.getElementById("comment").value;
+
+      // Validate form
+      if (!patientId || !rating) {
+        alert(
+          "Fill out everything except comment and patient name. Those are optional."
+        );
+        return;
+      }
+
+      if (rating < 1 || rating > 5) {
+        alert("Rating must be between 1 and 5.");
+        return;
+      }
+
+      // Print form values to the console
+      console.log("Patient ID:", patientId);
+      console.log("Patient Name:", patientName);
+      console.log("Rating:", rating);
+      console.log("Comment:", comment);
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  document
+    .getElementById("addAppointmentForm")
+    .addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent the form from submitting
+
+      // Get form values
+      var patientId = document.getElementById("patientId").value;
+      var doctorId = document.getElementById("doctorId").value;
+      var appointmentType = document.getElementById("appointmentType").value;
+      var date = document.getElementById("date").value;
+      var time = document.getElementById("time").value;
+      var status = document.getElementById("status").value;
+
+      // Validate form
+      if (
+        !patientId ||
+        !doctorId ||
+        !appointmentType ||
+        !date ||
+        !time ||
+        !status
+      ) {
+        alert("All fields are required.");
+        return;
+      }
+
+      // Print form values to the console
+      console.log("Patient ID:", patientId);
+      console.log("Doctor ID:", doctorId);
+      console.log("Appointment Type:", appointmentType);
+      console.log("Date:", date);
+      console.log("Time:", time);
+      console.log("Status:", status);
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  document
+    .getElementById("addPatientForm")
+    .addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent the form from submitting
+
+      // Get form values
+      var patientName = document.getElementById("patientName").value;
+      var dob = document.getElementById("dob").value;
+      var gender = document.getElementById("gender").value;
+      var email = document.getElementById("email").value;
+      var phone = document.getElementById("phone").value;
+      var city = document.getElementById("city").value;
+      var address = document.getElementById("address").value;
+      var medicalHistory = document.getElementById("medicalHistory").value;
+
+      // Validate form
+      if (
+        !patientName ||
+        !dob ||
+        !gender ||
+        !email ||
+        !phone ||
+        !city ||
+        !address ||
+        !medicalHistory
+      ) {
+        alert("All fields are required.");
+        return;
+      }
+
+      // Print form values to the console
+      console.log("Patient Name:", patientName);
+      console.log("Date of Birth:", dob);
+      console.log("Gender:", gender);
+      console.log("Email:", email);
+      console.log("Phone Number:", phone);
+      console.log("City:", city);
+      console.log("Address:", address);
+      console.log("Medical History:", medicalHistory);
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  document
+    .getElementById("addPrescriptionForm")
+    .addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent the form from submitting
+
+      // Get form values
+      var appointmentId = document.getElementById("appointmentId").value;
+      var medicaments = document.getElementById("medicaments").value;
+      var dosageInstructions =
+        document.getElementById("dosageInstructions").value;
+      var startDate = document.getElementById("startDate").value;
+      var endDate = document.getElementById("endDate").value;
+
+      // Validate form
+      if (
+        !appointmentId ||
+        !medicaments ||
+        !dosageInstructions ||
+        !startDate ||
+        !endDate
+      ) {
+        alert("All fields are required.");
+        return;
+      }
+
+      // Print form values to the console
+      console.log("Appointment ID:", appointmentId);
+      console.log("Medicaments:", medicaments);
+      console.log("Dosage Instructions:", dosageInstructions);
+      console.log("Start Date:", startDate);
+      console.log("End Date:", endDate);
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  document
+    .getElementById("addDepartmentForm")
+    .addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent the form from submitting
+
+      // Get form values
+      var departmentName = document.getElementById("departmentName").value;
+      var departmentHeadName =
+        document.getElementById("departmentHeadName").value;
+
+      // Validate form
+      if (!departmentName) {
+        alert("You have to enter department name.");
+        return;
+      }
+
+      // Print form values to the console
+      console.log("Department Name:", departmentName);
+      console.log("Department Head Name:", departmentHeadName);
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
   var loginForm = document.getElementById("loginForm");
   var registerForm = document.getElementById("registerForm");
 
@@ -44,193 +260,6 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log("Email:", email);
       console.log("Password:", password);
       console.log("Confirm Password:", confirmPassword);
-    });
-  }
-
-  const form = document.querySelector(".prescription-form");
-
-  if (form) {
-    form.addEventListener("submit", function (event) {
-      event.preventDefault(); // Prevent the form from submitting
-
-      // Perform form validation
-      const nameInput = form.querySelector("#name");
-      const quantityInput = form.querySelector("#quantity");
-      const daysInput = form.querySelector("#days");
-      const timesCheckboxes = form.querySelectorAll(
-        'input[name="times[]"]:checked'
-      );
-
-      let isValid = true;
-
-      if (
-        !nameInput.value.trim() ||
-        !quantityInput.value.trim() ||
-        !daysInput.value.trim() ||
-        timesCheckboxes.length === 0
-      ) {
-        isValid = false;
-        alert("Please fill in all fields and select at least one time.");
-      }
-
-      if (!isValid) {
-        return; // Exit if the form is not valid
-      }
-
-      // If the form is valid, print inputted values to the console
-      const prescriptionData = {
-        name: nameInput.value,
-        quantity: quantityInput.value,
-        days: daysInput.value,
-        times: Array.from(timesCheckboxes).map((checkbox) => checkbox.value),
-      };
-
-      console.log("Prescription Data:", prescriptionData);
-
-      // Clear the form
-      form.reset();
-    });
-  }
-
-  //Doctor settings
-  var doctorForm = document.getElementById("doctor_basic_information");
-
-  if (doctorForm) {
-    doctorForm.addEventListener("submit", function (event) {
-      event.preventDefault(); // Prevent the form from submitting normally
-
-      var firstName = document.getElementById("first_name").value;
-      var lastName = document.getElementById("last_name").value;
-      var email = document.getElementById("email").value;
-      var phone = document.getElementById("phone").value;
-      var gender = document.getElementById("gender").value;
-      var dob = document.getElementById("dob").value;
-      var specialization = document.getElementById("specialization").value;
-      var clinic = document.getElementById("clinic").value;
-      var availability = document.getElementById("availability").value;
-
-      // Simple validation
-      if (
-        !firstName ||
-        !lastName ||
-        !email ||
-        !phone ||
-        gender === "Select" ||
-        !specialization ||
-        !clinic
-      ) {
-        alert("Please fill in all required fields.");
-        return;
-      }
-
-      // If validation passes, print the entered data into the console
-      console.log("First Name:", firstName);
-      console.log("Last Name:", lastName);
-      console.log("Email:", email);
-      console.log("Phone:", phone);
-      console.log("Gender:", gender);
-      console.log("Date of Birth:", dob);
-      console.log("Specialization:", specialization);
-      console.log("Clinic:", clinic);
-      console.log("Availability:", availability);
-
-      doctorForm.reset();
-    });
-  }
-
-  // Patient settings
-  var patientForm = document.getElementById("patient_settings_form");
-
-  // Add submit event listener to the form
-  patientForm.addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent the form from submitting
-
-    // Get form field values
-    var firstName = document.getElementById("first_name").value;
-    var lastName = document.getElementById("last_name").value;
-    var dob = document.getElementById("dob").value;
-    var email = document.getElementById("email").value;
-    var phone = document.getElementById("phone").value;
-    var bloodGroup = document.getElementById("blood_group").value;
-    var address = document.getElementById("address").value;
-    var city = document.getElementById("city").value;
-    var country = document.getElementById("country").value;
-    var zipCode = document.getElementById("zip_code").value;
-    var medicalHistory = document.getElementById("notes").value;
-
-    // Simple validation
-    if (
-      !firstName ||
-      !lastName ||
-      !dob ||
-      !email ||
-      !phone ||
-      bloodGroup === "Select" ||
-      !address ||
-      !city ||
-      !country ||
-      !zipCode ||
-      !medicalHistory
-    ) {
-      alert("Please fill in all required fields.");
-      return;
-    }
-
-    // Print values to console
-    console.log("First Name:", firstName);
-    console.log("Last Name:", lastName);
-    console.log("Date of Birth:", dob);
-    console.log("Email:", email);
-    console.log("Phone:", phone);
-    console.log("Blood Group:", bloodGroup);
-    console.log("Address:", address);
-    console.log("City:", city);
-    console.log("Country:", country);
-    console.log("Zip Code:", zipCode);
-    console.log("Medical History:", medicalHistory);
-
-    // Reset form after submission
-    patientForm.reset();
-  });
-
-  //Add review
-  const med_record_form = document.querySelector(".medical-record-form");
-
-  if (med_record_form) {
-    med_record_form.addEventListener("submit", function (event) {
-      event.preventDefault(); // Prevent the form from submitting
-
-      // Perform form validation
-      const diagnosisInput = med_record_form.querySelector("#diagnosis");
-      const treatmentInput = med_record_form.querySelector("#treatment");
-      const notesInput = med_record_form.querySelector("#notes");
-
-      let isValid = true;
-
-      if (
-        !diagnosisInput.value.trim() ||
-        !treatmentInput.value.trim() ||
-        !notesInput.value.trim()
-      ) {
-        isValid = false;
-        alert("Please fill in all fields.");
-      }
-
-      if (!isValid) {
-        return; // Exit if the form is not valid
-      }
-
-      // If the form is valid, print inputted values to the console
-      const medicalRecordData = {
-        diagnosis: diagnosisInput.value,
-        treatment: treatmentInput.value,
-        notes: notesInput.value,
-      };
-
-      console.log("Medical Record Data:", medicalRecordData);
-
-      // Clear the form
-      med_record_form.reset();
     });
   }
 });

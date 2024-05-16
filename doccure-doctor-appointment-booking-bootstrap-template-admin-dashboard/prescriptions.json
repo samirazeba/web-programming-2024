@@ -1,0 +1,83 @@
+[
+    {
+      "id": 1,
+      "appointment_id": 3,
+      "medicaments": "Paracetamol",
+      "dosage_instructions": "Take 1 tablet every 6 hours",
+      "start_date": "2024-05-01",
+      "end_date": "2024-05-10"
+    },
+    {
+      "id": 2,
+      "appointment_id": 7,
+      "medicaments": "Ibuprofen",
+      "dosage_instructions": "Take 2 tablets with food",
+      "start_date": "2024-04-25",
+      "end_date": "2024-05-05"
+    },
+    {
+      "id": 3,
+      "appointment_id": 5,
+      "medicaments": "Antibiotic",
+      "dosage_instructions": "Take 1 capsule every 12 hours",
+      "start_date": "2024-05-02",
+      "end_date": "2024-05-12"
+    },
+    {
+      "id": 4,
+      "appointment_id": 8,
+      "medicaments": "Cough Syrup",
+      "dosage_instructions": "Take 10ml every 4 hours",
+      "start_date": "2024-05-03",
+      "end_date": "2024-05-08"
+    },
+    {
+      "id": 5,
+      "appointment_id": 2,
+      "medicaments": "Antacid",
+      "dosage_instructions": "Take 1 tablet after meals",
+      "start_date": "2024-04-30",
+      "end_date": "2024-05-07"
+    },
+    {
+      "id": 6,
+      "appointment_id": 1,
+      "medicaments": "Eye Drops",
+      "dosage_instructions": "Apply 1 drop to each eye twice a day",
+      "start_date": "2024-05-04",
+      "end_date": "2024-05-14"
+    },
+    {
+      "id": 7,
+      "appointment_id": 4,
+      "medicaments": "Vitamin C",
+      "dosage_instructions": "Take 1 tablet daily",
+      "start_date": "2024-05-05",
+      "end_date": "2024-05-20"
+    },
+    {
+      "id": 8,
+      "appointment_id": 6,
+      "medicaments": "Antihistamine",
+      "dosage_instructions": "Take 1 tablet before bedtime",
+      "start_date": "2024-05-06",
+      "end_date": "2024-05-16"
+    },
+    {
+      "id": 9,
+      "appointment_id": 9,
+      "medicaments": "Muscle Relaxant",
+      "dosage_instructions": "Take 1 tablet every 8 hours as needed for pain",
+      "start_date": "2024-05-07",
+      "end_date": "2024-05-17"
+    },
+    {
+      "id": 10,
+      "appointment_id": 1,
+      "medicaments": "Sleep Aid",
+      "dosage_instructions": "Take 1 tablet 30 minutes before bedtime",
+      "start_date": "2024-05-08",
+      "end_date": "2024-05-18"
+    }
+  ]
+  
