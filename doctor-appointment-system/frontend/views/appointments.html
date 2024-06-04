@@ -1,0 +1,243 @@
+<div>
+	<!-- Main Wrapper -->
+			<div class="main-wrapper">
+				
+				<!-- Breadcrumb -->
+				<div class="breadcrumb-bar">
+					<div class="container-fluid">
+						<div class="row align-items-center">
+							<div class="col-md-12 col-12">
+								<nav aria-label="breadcrumb" class="page-breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item"><a href="#home">Home</a></li>
+										<li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+									</ol>
+								</nav>
+								<h2 class="breadcrumb-title">Dashboard</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /Breadcrumb -->
+				
+				<!-- Page Content -->
+				<div class="content">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
+								<!-- Profile Sidebar -->
+							<div class="profile-sidebar">
+								<div class="widget-profile pro-widget-content">
+									<div class="profile-info-widget">
+										<a href="#" class="booking-doc-img">
+											<img src="assets/img/doctors/doctor-thumb-02.jpg" alt="User Image">
+										</a>
+										<div class="profile-det-info">
+											<h3>Dr. Darren Elder</h3>
+											
+											<div class="patient-details">
+												<h5 class="mb-0">BDS, MDS - Oral & Maxillofacial Surgery</h5>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="dashboard-widget">
+									<nav class="dashboard-menu">
+										<ul>
+											<li class="active">
+												<a href="#doctor-dashboard">
+													<i class="fas fa-columns"></i>
+													<span>Dashboard</span>
+												</a>
+											</li>
+											<li>
+												<a href="#appointments">
+													<i class="fas fa-calendar-check"></i>
+													<span>Appointments</span>
+												</a>
+											</li>
+											<li>
+												<a href="#reviews">
+													<i class="fas fa-star"></i>
+													<span>Reviews</span>
+												</a>
+											</li> 
+											<li>
+												<a href="#doctor-change-password">
+													<i class="fas fa-lock"></i>
+													<span>Change Password</span>
+												</a>
+											</li>
+											<li>
+												<a href="#home">
+													<i class="fas fa-sign-out-alt"></i>
+													<span>Logout</span>
+												</a>
+											</li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+							<!-- /Profile Sidebar -->
+							</div>
+						
+							
+							<div class="col-md-7 col-lg-8 col-xl-9">
+	
+								<div class="row-center">
+									<div class="col-md-12">
+										<div class="card dash-card">
+											<div class="card-body">
+												<div class="row">
+													<div class="col-md-12 col-lg-4">
+														<div class="dash-widget dct-border-rht">
+															<div class="circle-bar circle-bar1">
+																<div class="circle-graph1" data-percent="75">
+																	<img src="assets/img/icon-01.png" class="img-fluid" alt="patient">
+																</div>
+															</div>
+															<div class="dash-widget-info">
+																<h6>Total Patient</h6>
+																<h3>1500</h3>
+																<p class="text-muted">Till Today</p>
+															</div>
+														</div>
+													</div>
+													
+													<div class="col-md-12 col-lg-4">
+														<div class="dash-widget dct-border-rht">
+															<div class="circle-bar circle-bar2">
+																<div class="circle-graph2" data-percent="65">
+																	<img src="assets/img/icon-02.png" class="img-fluid" alt="Patient">
+																</div>
+															</div>
+															<div class="dash-widget-info">
+																<h6>Today Patient</h6>
+																<h3>160</h3>
+																<p class="text-muted">06, Nov 2019</p>
+															</div>
+														</div>
+													</div>
+													
+													<div class="col-md-12 col-lg-4">
+														<div class="dash-widget">
+															<div class="circle-bar circle-bar3">
+																<div class="circle-graph3" data-percent="50">
+																	<img src="assets/img/icon-03.png" class="img-fluid" alt="Patient">
+																</div>
+															</div>
+															<div class="dash-widget-info">
+																<h6>Appoinments</h6>
+																<h3>85</h3>
+																<p class="text-muted">06, Apr 2019</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="row-center">
+									<div class="col-md-12">
+										<h4 class="mb-4">Upcoming Appointments</h4>
+										<div class="appointment-tab">
+											
+											<div class="tab-content">
+											
+												<!-- Upcoming Appointment Tab -->
+												<div class="tab-pane show active" id="appointments">
+													<div class="card card-table mb-0">
+														<div class="card-body">
+															<div class="text-right">
+																<button class="add-new-btn" id="addAppointmentBtn">Add Appointment</button>
+															</div>
+															<div class="table-responsive">
+																<table id="appointments" class="table table-striped" style="width:100%">
+																	<thead>
+																		<tr>
+																			<th>ID</th>
+																			<th>Patient ID</th>
+																			<th>Doctor ID</th>
+																			<th>Appointment Type</th>
+																			<th>Date</th>
+																			<th>Time</th>
+																			<th>Status</th>
+																		</tr>
+																	</thead>
+																	<tbody id="appointments-table-body"></tbody>
+																</table>	
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- /Upcoming Appointment Tab -->
+												
+											</div>
+										</div>
+									</div>
+								</div>
+	
+							
+						</div>
+	
+					</div>
+	
+				</div>		
+				<!-- /Page Content -->
+
+				<div id="addAppointmentModal" class="modal">
+					<div class="modal-content">
+						<span class="close">&times;</span>
+						<h2>Add Appointment</h2>
+						<!-- Add department form -->
+						<form id="addAppointmentForm">
+							<div class="form-group">
+								<label for="patientId">Patient ID</label>
+								<input type="text" id="patientId" name="patientId">
+							</div>
+							<div class="form-group">
+								<label for="doctorId">Doctor ID</label>
+								<input type="text" id="doctorId" name="doctorId">
+							</div>
+							<div class="form-group">
+								<label for="appointmentType">Appointment Type</label>
+								<input type="text" id="appointmentType" name="appointmentType">
+							</div>
+							<div class="form-group">
+								<label for="date">Date</label>
+								<input type="date" id="date" name="date">
+							</div>
+							<div class="form-group">
+								<label for="time">Time</label>
+								<input type="time" id="time" name="time">
+							</div>
+							<div class="form-group">
+								<label for="status">Status</label>
+								<input type="text" id="status" name="status">
+							</div>
+							<button type="submit">Submit</button>
+						</form>
+					</div>
+				</div>
+
+			</div>
+	</div>
+<script>
+	var modal = document.getElementById("addAppointmentModal");
+	var btn = document.getElementById("addAppointmentBtn");
+	var span = document.getElementsByClassName(".modal.close");
+
+	btn.onclick = function () {
+		modal.style.display = "block";
+	};
+	span.onclick = function () {
+		modal.style.display = "none";
+	};
+	window.onclick = function (event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+	};
+</script>
